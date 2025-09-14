@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 from os.path import exists
 from os import remove
 from uvloop import install
-from pyrogram.enums import MessageMediaType
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import (
     Message,
@@ -20,6 +19,9 @@ from pyrogram.types import (
 from pyrogram.errors import (
     ChatAdminRequired,
     FloodWait,
+)
+from pyrogram.enums import (
+    MessageMediaType,
 )
 
 uvloop.install()
