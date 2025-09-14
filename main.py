@@ -40,13 +40,13 @@ db = client["SchedulerBot"]
 
 try:
     replaceable = eval(os.getenv("REPLACE"))
-except Exception:
-    logging.error(f"Konfigurasi REPLACE salah!")
+except Exception as e:
+    return logging.error(f"Konfigurasi REPLACE salah {e}")
 
 try:
     chats = eval(os.getenv("CHATS"))
-except Exception:
-    logging.error(f"Konfigurasi CHATS salah!")
+except Exception as e:
+    return logging.error(f"Konfigurasi CHATS salah {e}")
 
 bot = Client(
     "bot",
