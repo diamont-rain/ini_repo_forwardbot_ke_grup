@@ -75,7 +75,6 @@ async def listener(_, message: Message):
 
 async def steal(chat_id, message_id, get_groups):
     try:
-
         message = await ubot.get_messages(chat_id, message_id)
     except Exception as e:
         return logging.error(f"GetMessage: {chat_id}/{message_id}\n{e}")
