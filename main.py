@@ -194,8 +194,8 @@ async def steal(chat_id, message_id, get_groups):
                         message_id=msg_id["msg_id"],
                     )
             except FloodWait as e:
-                logging.warning(f"Flood wait {e.value} seconds for group {i}")
                 await sleep(e.value)
+                logging.warning(f"Flood wait {e.value} seconds for group {i}")
                 if msg_id:
                     await bot.unpin_chat_message(
                         chat_id=pin_msg.chat.id,
@@ -211,8 +211,8 @@ async def steal(chat_id, message_id, get_groups):
                 if pinned_msg:
                     await pinned_msg.delete()
             except FloodWait as e:
-                logging.warning(f"Flood wait {e.value} seconds for group {i}")
                 await sleep(e.value)
+                logging.warning(f"Flood wait {e.value} seconds for group {i}")
                 pinned_msg = await pin_msg.pin(disable_notification=True)
                 if pinned_msg:
                     await pinned_msg.delete()
