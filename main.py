@@ -120,7 +120,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         photo=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -129,7 +129,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         video=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -138,7 +138,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         video_note=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -147,7 +147,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         audio=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -156,7 +156,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         voice=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -165,7 +165,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         animation=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -181,7 +181,7 @@ async def steal(chat_id, message_id, get_groups):
                         int(i),
                         document=media,
                         caption=msg,
-                        caption_entities=msg.caption.entities,
+                        caption_entities=msg.entities,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         protect_content=True,
                     )
@@ -189,7 +189,7 @@ async def steal(chat_id, message_id, get_groups):
                 pin_msg = await bot.send_message(
                     int(i),
                     msg,
-                    entities=msg.text.entities,
+                    entities=msg.entities,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     protect_content=True,
                 )
